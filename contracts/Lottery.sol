@@ -20,7 +20,7 @@ contract Lottery{
         players.push(payable(msg.sender));
     }
 
-    function random() private view returns(uint){
+    function random() private view returns (uint){
         return uint(keccak256(
             abi.encodePacked(
                 block.difficulty,
@@ -37,7 +37,7 @@ contract Lottery{
         players = new address payable[](0);
     }
 
-    function getPlayers() public view returns (address payable[ ]memory) {
+    function getPlayers() public view returns (address payable[] memory) {
         return players;
     }
 }
